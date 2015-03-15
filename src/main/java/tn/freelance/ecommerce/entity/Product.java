@@ -2,13 +2,36 @@ package tn.freelance.ecommerce.entity;
 
 import java.io.Serializable;
 
-public class Product implements Serializable {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
+@Entity
+public class Product implements Serializable {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idProduct;
+	@NotEmpty
 	private String nameProduct;
 	private String description;
 	private double amount;
 	private String picture;
+	@ManyToOne
+	@JoinColumn(name="ID_CAT")
+    private Category category;
+	
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
 
 	public Long getIdProduct() {
 		return idProduct;

@@ -4,13 +4,27 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
+@Entity
 public class Category implements Serializable{
-	
+	@Id
+	@GeneratedValue
 	private Long  idCategory;
+	@NotEmpty
+	@Size(min=4,max=20)
 	private String nameCategory; 
 	private String description;
 	private String namePicture;
+	@Lob
 	private byte[] picture;
+	@OneToMany(mappedBy="category")
 	private Collection<Product> products=new ArrayList<Product>();
 	
 	
