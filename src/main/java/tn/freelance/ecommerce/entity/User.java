@@ -10,11 +10,10 @@ public class User implements Serializable {
 	private boolean activated;
 	private Collection<Role> roles;
 	
-	
+
 	public User() {
 		super();
 	}
-	
 	public User(String userName, String password, boolean activated) {
 		super();
 		this.userName = userName;

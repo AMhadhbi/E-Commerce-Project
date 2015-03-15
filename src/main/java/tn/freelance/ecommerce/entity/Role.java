@@ -7,6 +7,7 @@ public class Role implements Serializable{
 	private Long idRole;
 	private String roleName;
 	
+	
 	public Role() {
 		super();
 	}
