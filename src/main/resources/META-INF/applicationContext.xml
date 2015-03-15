@@ -18,4 +18,9 @@
 			</list>
 		</property>
 	</bean>
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="persistenceUnitManager" ref="persistenceUnitManager"></property>
+		<property name="persistenceUnitName" value="UP_Ecommerce"></property>
+	</bean>
 </beans>
