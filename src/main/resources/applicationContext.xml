@@ -5,6 +5,11 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+	<bean id="dao" class="tn.freelance.ecommerce.dao.EcommerceDAOImpl"></bean>
+	<bean id="metier" class="tn.freelance.ecommerce.service.EcommerceServiceImpl">
+	<property name="dao" ref="dao"></property>
+	</bean>
+	
 	<bean id="datasource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
