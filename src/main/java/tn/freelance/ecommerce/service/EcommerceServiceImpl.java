@@ -93,7 +93,7 @@ public class EcommerceServiceImpl implements IEcommerceService {
 
 	@Override
 	public void updateProduct(Product p) {
-		dao.updateProduct(p);
+
 
 	}
 
