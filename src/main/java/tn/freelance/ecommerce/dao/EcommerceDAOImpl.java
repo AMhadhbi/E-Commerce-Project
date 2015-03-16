@@ -11,9 +11,9 @@ import tn.freelance.ecommerce.entity.Product;
 import tn.freelance.ecommerce.entity.Role;
 import tn.freelance.ecommerce.entity.User;
 
-@PersistenceContext
-public class EcommerceDAOImpl implements ICommerceDAO {
 
+public class EcommerceDAOImpl implements ICommerceDAO {
+	@PersistenceContext
 	private EntityManager em;
 
 	@Override
