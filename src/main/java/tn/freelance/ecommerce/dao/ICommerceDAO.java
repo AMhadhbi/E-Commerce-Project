@@ -17,7 +17,7 @@ public interface ICommerceDAO {
 	public Long addProduct (Product p, Long idCat);
 	public List<Product> listproduct();
 	public List<Product> searchProduct(String mc);
-	public List<Product> produitsParCategorie(Long idCat);
+	public List<Product> productbyCategory(Long idCat);
 	public List<Product> productselected();
 	public Product getProduc(Long idP);
 	public void deleteProduct(Long idP);
