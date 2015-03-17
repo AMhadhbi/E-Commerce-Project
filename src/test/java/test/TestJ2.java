@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import java.util.List;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,11 +15,17 @@ import tn.freelance.ecommerce.service.IAdminCategoryService;
 
 public class TestJ2 {
 
+	ClassPathXmlApplicationContext context;
+
+	@Before
+	public void setUp() throws Exception {
+		context = new ClassPathXmlApplicationContext(
+				new String[] { "applicationContext.xml" });
+	}
+
 	@Test
 	public void testCategroy() {
 		try {
-			ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-					new String[] { "applicationContext.xml" });
 
 			IAdminCategoryService metier = (IAdminCategoryService) context
 					.getBean("metier");
@@ -36,8 +43,6 @@ public class TestJ2 {
 	@Test
 	public void testProduct() {
 		try {
-			ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-					new String[] { "applicationContext.xml" });
 
 			IAdminCategoryService metier = (IAdminCategoryService) context
 					.getBean("metier");
