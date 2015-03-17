@@ -10,7 +10,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import tn.freelance.ecommerce.entity.Category;
 import tn.freelance.ecommerce.entity.Product;
-import tn.freelance.ecommerce.service.EcommerceServiceImpl;
 import tn.freelance.ecommerce.service.IAdminCategoryService;
 
 public class TestJ2 {
@@ -47,10 +46,10 @@ public class TestJ2 {
 			IAdminCategoryService metier = (IAdminCategoryService) context
 					.getBean("metier");
 			List<Product> prod1 = metier.listproduct();
-			metier.addProduct(new Product("P1"), 1L);
-			metier.addProduct(new Product("P2"), 1L);
+			metier.addProduct(new Product("Pdddd1"), 1L);
+			metier.addProduct(new Product("Pdddd2"), 1L);
 			List<Product> prod2 = metier.listproduct();
-			assertTrue(prod1.size() == prod2.size() + 2);
+			assertTrue(prod2.size() == prod1.size() + 2);
 		} catch (Exception e) {
 			assertTrue(e.getMessage(), false);
 		}
