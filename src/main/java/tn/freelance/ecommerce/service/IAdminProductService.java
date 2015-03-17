@@ -2,7 +2,7 @@ package tn.freelance.ecommerce.service;
 
 import tn.freelance.ecommerce.entity.Product;
 
-public interface IAdminProductService {
+public interface IAdminProductService extends IUserService{
 
 	public Long addProduct(Product p, Long idCat);
 

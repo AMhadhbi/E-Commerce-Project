@@ -4,7 +4,7 @@ import tn.freelance.ecommerce.entity.Category;
 import tn.freelance.ecommerce.entity.Role;
 import tn.freelance.ecommerce.entity.User;
 
-public interface IAdminCategory extends IAdminProductService {
+public interface IAdminCategoryService extends IAdminProductService {
 
 	public Long addCategory(Category c);
 

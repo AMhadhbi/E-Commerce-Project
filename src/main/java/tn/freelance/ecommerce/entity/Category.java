@@ -37,7 +37,7 @@ public class Category implements Serializable{
 		super();
 		this.nameCategory = nameCategory;
 	}
-
+    
 
 	public Long getIdCategory() {
 		return idCategory;
