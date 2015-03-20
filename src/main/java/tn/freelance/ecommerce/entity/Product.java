@@ -20,7 +20,10 @@ public class Product implements Serializable {
 	private String nameProduct;
 	private String description;
 	private double amount;
+	private int nbproduct;
 	private String picture;
+	private boolean selected;
+	
 	@ManyToOne
 	@JoinColumn(name="ID_CAT")
     private Category category;
@@ -31,6 +34,14 @@ public class Product implements Serializable {
 
 	public void setCategory(Category category) {
 		this.category = category;
+	}
+
+	public boolean isSelected() {
+		return selected;
+	}
+
+	public void setSelected(boolean selected) {
+		this.selected = selected;
 	}
 
 	public Long getIdProduct() {
@@ -81,7 +92,7 @@ public class Product implements Serializable {
 		this.nbproduct = nbproduct;
 	}
 
-	private int nbproduct;
+	
 
 	public Product() {
 		super();
