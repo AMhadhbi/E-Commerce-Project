@@ -9,8 +9,8 @@
 		enctype="multipart/form-data">
 		<table>
 			<tr>
-				<td>${category.idCategory}<f:input type="hidden"
-						path="idCategory" /></td>
+				<td>${category.idCategory}
+				<f:input type="hidden" path="idCategory" /></td>
 				<td><f:errors path="idCategory"></f:errors></td>
 			</tr>
 			<tr>

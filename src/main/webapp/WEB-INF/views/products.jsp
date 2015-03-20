@@ -9,10 +9,9 @@
 <div id="formProd" class="cadre">
 	<f:form modelAttribute="product" action="saveProd" method="post"
 		enctype="multipart/form-data">
-		<table>
+		<table class="tabStyle1">
 			<tr>
-				<td>ID Product</td>
-				<td><f:input path="idProduct" /></td>
+				<td><f:input type="hidden" path="idProduct" /></td>
 				<td><f:errors path="idProduct" cssClass="errors"></f:errors></td>
 			</tr>
 			<tr>
@@ -34,12 +33,12 @@
 			</tr>
 
 			<tr>
-				<td>Prix</td>
+				<td>Amount</td>
 				<td><f:input path="amount" /></td>
 				<td><f:errors path="amount" cssClass="errors"></f:errors></td>
 			</tr>
 			<tr>
-				<td>Number Product</td>
+				<td>Numbers</td>
 				<td><f:input path="nbproduct" /></td>
 				<td><f:errors path="nbproduct" cssClass="errors"></f:errors></td>
 			</tr>
@@ -64,7 +63,7 @@
 </div>
 
 <div id="tabProducts" class="cadre">
-	<table class="tab1">
+	<table class="tabStyle1">
 		<tr>
 			<th>ID</th>
 			<th>Name Product</th>
