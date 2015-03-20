@@ -55,7 +55,7 @@ public class AdminCategoryController {
 		else
 			service.updateCategory(c);
 		;
-		model.addAttribute("categorie", new Category());
+		model.addAttribute("category", new Category());
 		model.addAttribute("categories", service.listCategory());
 		return "categories";
 	}
