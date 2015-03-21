@@ -9,8 +9,18 @@
 	<bean id="dao" class="tn.freelance.ecommerce.dao.EcommerceDAOImpl"></bean>
 	<bean id="metier" class="tn.freelance.ecommerce.service.EcommerceServiceImpl">
 		<property name="dao" ref="dao"></property>
-	</bean>
-	<s:http>
+	</bean>	
+	<!-- Spring Security -->
+	<filter>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+<s:http>
 		<s:intercept-url pattern="/adminPro/**" access="ROLE_ADMIN_PROD"/>
 		<s:intercept-url pattern="/adminCat/**" access="ROLE_ADMIN_CAT"/>
 		<s:form-login login-page="/login" default-target-url="/adminPro/index"
